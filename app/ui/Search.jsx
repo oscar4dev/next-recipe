@@ -2,7 +2,7 @@
 
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { useDebouncedCallback } from "use-debounce";
-import { CiSearch } from "react-icons/ci";
+// import { CiSearch } from "react-icons/ci";
 
 export default function Search() {
 
@@ -26,7 +26,7 @@ export default function Search() {
    return (
       <div className="flex items-center justify-center mt-2">
          <span className="absolute left-20">
-            <CiSearch />
+            {/* <CiSearch /> */}
          </span>
          <input
             type="text"

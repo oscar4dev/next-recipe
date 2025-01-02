@@ -1,7 +1,7 @@
 'use client'
 
 import { createContext, useContext, useState } from "react";
-import toast from "react-hot-toast";
+// import toast from "react-hot-toast";
 
 const RecipeContext = createContext(null)
 
@@ -17,10 +17,10 @@ function RecipeContextProvider ({ children }) {
 
       if (index === -1) {
          copyOfFavourites.push(newItem)
-         toast('Successfully added!')
+         // toast('Successfully added!')
       } else {
          copyOfFavourites.splice(index)
-         toast('Removed!')
+         // toast('Removed!')
       }
 
       setFavourites(copyOfFavourites)    

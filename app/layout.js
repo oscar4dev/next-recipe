@@ -2,7 +2,7 @@ import { Montserrat } from "next/font/google";
 import "./globals.css";
 import PageNav from "./ui/PageNav";
 import { RecipeContextProvider } from "./ui/recipeContext";
-import { Toaster } from "react-hot-toast";
+// import { Toaster } from "react-hot-toast";
 import Search from "./ui/Search";
 import Footer from "./ui/Footer";
 import { Suspense } from "react";
@@ -22,13 +22,13 @@ export default function RootLayout({ children }) {
       <body
         className={` ${montserrat.className} antialiased flex flex-col min-h-dvh`}
       >
-        <Toaster
+        {/* <Toaster
           position="top-center"
           gutter={8}
           toastOptions={{
             duration: 3000,
           }}
-        />
+        /> */}
 
         <header className="z-10 fixed mt-4 w-full">
           <PageNav />

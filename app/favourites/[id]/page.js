@@ -2,7 +2,7 @@ import { getRecipe } from "@/app/lib/apiServices"
 import AddToFavouritesBtn from "@/app/ui/AddToFavouritesBtn"
 import IngredientsItem from "@/app/ui/IngredientsItem"
 import Image from "next/image"
-import { FaInfoCircle } from "react-icons/fa";
+// import { FaInfoCircle } from "react-icons/fa";
 
 export default async function page({ params }) {
 
@@ -39,7 +39,10 @@ export default async function page({ params }) {
                   <span>Published by: { publisher }</span>
                   <a
                      href={ source_url }
-                  ><FaInfoCircle /></a>
+                  >
+                     {/* <FaInfoCircle /> */}
+                     info
+                  </a>
                </p>
             
                <div className="mt-4">
