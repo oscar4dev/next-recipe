@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { GoLinkExternal } from "react-icons/go";
-import { RiNextjsFill } from "react-icons/ri";
+// import { GoLinkExternal } from "react-icons/go";
+// import { RiNextjsFill } from "react-icons/ri";
 
 export default function Footer() {
 
@@ -16,7 +16,7 @@ export default function Footer() {
             >
                Oscar4dev
             </a>
-            <GoLinkExternal />
+            {/* <GoLinkExternal /> */}
          </div>
 
          <p>All rights reserved.</p>
@@ -26,7 +26,7 @@ export default function Footer() {
             className="text-lg flex items-center gap-1"
          >
             <span>Powered by</span>
-            <RiNextjsFill />
+            {/* <RiNextjsFill /> */}
          </Link>
       </div>
    )
