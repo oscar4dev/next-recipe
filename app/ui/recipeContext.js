@@ -1,27 +1,14 @@
 'use client'
 
-import { createContext, useContext, useEffect, useState } from "react";
+import { createContext, useContext, useState } from "react";
 import toast from "react-hot-toast";
 
 const RecipeContext = createContext(null)
 
 function RecipeContextProvider ({ children }) {
 
-   // const [favourites, setFavourites] = useState([])
-   const [favourites, setFavourites] = useState(() => {
-      try {
-        const storedFavourites = localStorage.getItem('favourites');
-        return storedFavourites ? JSON.parse(storedFavourites) : []; 
-      } catch (error) {
-        console.error('Error loading favourites from localStorage:', error);
-        return []; 
-      }
-   });
+   const [favourites, setFavourites] = useState([])
     
-   useEffect(() => {
-      localStorage.setItem('favourites', JSON.stringify(favourites));
-   }, [favourites]);
-
    function handleFavourites (newItem) {
       let copyOfFavourites = [...favourites]
       const index = copyOfFavourites.findIndex((item) => {
@@ -37,7 +24,6 @@ function RecipeContextProvider ({ children }) {
       }
 
       setFavourites(copyOfFavourites)    
-      // localStorage.setItem('recipe', JSON.stringify([...favourites]))  
    }
 
    return (
