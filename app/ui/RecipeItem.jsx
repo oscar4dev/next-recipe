@@ -6,7 +6,7 @@ export default function RecipeItem({ item }) {
    return (
       <Link 
          href={ `/favourites/${ item.id }` }
-         className="relative flex items-center justify-center h-[400px] w-5/6 overflow-hidden"
+         className="relative flex items-center justify-center h-[400px] w-full overflow-hidden"
       >
          <Image 
             src={ item.image_url }
@@ -19,7 +19,7 @@ export default function RecipeItem({ item }) {
          />
 
          <div className="absolute bottom-4 text-slate-50 text-center">
-            <p>{ item.title }</p>
+            <p className="font-bold">{ item.title }</p>
             <p>{ item.publisher }</p>
          </div>
       </Link>

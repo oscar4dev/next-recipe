@@ -8,7 +8,7 @@ export default function AddToFavouritesBtn({ data }) {
    return (
       <button 
          onClick={ () => handleFavourites(data) }
-         className="mt-4 bg-slate-900 py-2 rounded-full block w-full text-slate-50 text-sm hover:bg-slate-700 duration-300 ease-in-out"
+         className="mt-4 bg-slate-900 py-4 rounded-full block w-full text-slate-50 text-sm hover:bg-slate-700 duration-300 ease-in-out"
       >
          {
             favourites && favourites.findIndex(

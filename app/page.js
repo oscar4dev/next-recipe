@@ -8,10 +8,10 @@ import Link from "next/link";
 export default async function Page({ searchParams }) {
 
   const searchParam = await searchParams
-  const query = searchParam?.query || ''  
+  const query = searchParam?.query || '' 
 
   return (
-    <div>
+    <div className="px-4">
       <Suspense fallback={ <Spinner /> }>
         <Recipe query={ query } />
       </Suspense>

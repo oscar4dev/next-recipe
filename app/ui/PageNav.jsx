@@ -11,13 +11,13 @@ export default function PageNav() {
    const pathname = usePathname()
 
    return (
-      <div className="flex items-center justify-between bg-slate-100 p-2 rounded-full w-[95%] mx-auto">
+      <div className="flex items-center justify-between bg-slate-100 p-4 rounded-full w-[95%] mx-auto">
          <Link href={ '/' }>
             <Logo />
          </Link>
 
          <Suspense fallback={ <div>loading...</div> }>
-            <div className="hidden sm:block">
+            <div className="hidden sm:block"> 
                <Search />
             </div>
          </Suspense>

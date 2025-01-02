@@ -6,6 +6,7 @@ import { RecipeContextProvider } from "./ui/recipeContext";
 import Search from "./ui/Search";
 import Footer from "./ui/Footer";
 import { Suspense } from "react";
+import AvailableSearchQuery from "./ui/AvailableSearchQuery";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -36,12 +37,15 @@ export default function RootLayout({ children }) {
           <Suspense fallback={ <div>loading...</div> }>
             <div className="sm:hidden">
               <Search />
+              <div className="flex justify-end mr-8 mt-2">
+                <AvailableSearchQuery />
+              </div>
             </div>
           </Suspense>
 
         </header>
 
-        <main className="mt-32 flex-1 lg:w-[1024px] lg:mx-auto">
+        <main className="pt-40 flex-1 lg:w-[1024px] lg:mx-auto">
           <RecipeContextProvider>
             {children}
           </RecipeContextProvider>

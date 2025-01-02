@@ -19,7 +19,7 @@ export default function FavouriteItem({ item }) {
             <p>{ item.publisher }</p>
             <Link 
                href={ `/favourites/${ item.id }` }
-               className='bg-slate-900 text-slate-50 text-sm px-4 py-2 rounded-full block w-5/6 mx-auto mt-4 text-center hover:bg-slate-700 duration-300 ease-in-out'
+               className='bg-slate-900 text-slate-50 text-sm p-4 rounded-full block w-5/6 mx-auto mt-4 text-center hover:bg-slate-700 duration-300 ease-in-out'
                >
                Show details
             </Link>

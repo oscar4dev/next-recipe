@@ -32,7 +32,7 @@ export default function Search() {
             type="text"
             placeholder="Search for a recipe"
             onClick={ () => { router.push('/') } }
-            className="shadow-md border pl-6 px-2 outline-slate-900 placeholder:text-sm p-1"
+            className="shadow-md rounded-full border-2 w-5/6 p-2 pl-4 outline-slate-900 placeholder:text-sm sm:focus:w-[300px] transition-all duration-300 ease-in-out"
             onChange={ (e) => handleSearch(e.target.value) }
             defaultValue={ searchParams.get('query')?.toString() }
          />
