@@ -26,7 +26,7 @@ export default async function Page({ searchParams }) {
 
       <nav className="flex flex-col gap-4">
         <Link href={ '/faq' }>FAQ</Link>
-        <Link href={ '/contact' }>Contact</Link>
+        <Link href={ '/' }>Contact</Link>
       </nav>
 
     </div>

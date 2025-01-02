@@ -28,9 +28,9 @@ export default function Search() {
          <span className="absolute left-20">
             <CiSearch />
          </span>
-         <input 
+         <input
             type="text"
-            placeholder="Search for a recipe" 
+            placeholder="Search for a recipe"
             onClick={ () => { router.push('/') } }
             className="shadow-md border pl-6 px-2 outline-slate-900 placeholder:text-sm p-1"
             onChange={ (e) => handleSearch(e.target.value) }

@@ -9,6 +9,7 @@ export default function Spinner() {
                alt="spinner"
                fill
                sizes='75vh'
+               unoptimized
                className="object-cover"
             />
          </div>

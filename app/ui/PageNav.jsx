@@ -4,6 +4,7 @@ import Link from "next/link";
 import Logo from "./Logo";
 import Search from "./Search";
 import { usePathname } from "next/navigation";
+import { Suspense } from "react";
 
 export default function PageNav() {
 
@@ -15,9 +16,11 @@ export default function PageNav() {
             <Logo />
          </Link>
 
-         <div className="hidden sm:block">
-            <Search />
-         </div>
+         <Suspense fallback={ <div>loading...</div> }>
+            <div className="hidden sm:block">
+               <Search />
+            </div>
+         </Suspense>
 
          <nav>
             <ul className="flex items-center gap-4">

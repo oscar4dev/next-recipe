@@ -5,6 +5,7 @@ import { RecipeContextProvider } from "./ui/recipeContext";
 import { Toaster } from "react-hot-toast";
 import Search from "./ui/Search";
 import Footer from "./ui/Footer";
+import { Suspense } from "react";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -28,11 +29,16 @@ export default function RootLayout({ children }) {
             duration: 3000,
           }}
         />
+
         <header className="z-10 fixed mt-4 w-full">
           <PageNav />
-          <div className="sm:hidden">
-            <Search />
-          </div>
+
+          <Suspense fallback={ <div>loading...</div> }>
+            <div className="sm:hidden">
+              <Search />
+            </div>
+          </Suspense>
+
         </header>
 
         <main className="mt-32 flex-1 lg:w-[1024px] lg:mx-auto">
