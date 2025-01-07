@@ -36,3 +36,19 @@ export async function getFeaturedRecipes () {
       console.error('An error occured loading data', error)
    }
 }
+
+export async function getNewestRecipes () {
+   try {
+      const res = await fetch(`${ BASE_URL }?search=tomato`)
+
+      if (!res.ok) {
+         throw new Error('An error occured loading data 😢', error.message)
+      }
+
+      const data = await res.json()
+      return data.data.recipes.slice(0, 10)
+      
+   } catch (error) {
+      console.error('An error occured loading data', error)
+   }
+}

@@ -5,11 +5,13 @@ import Spinner from "./ui/Spinner";
 import ImageSlider from "./ui/ImageSlider";
 import Link from "next/link";
 import QueryResult from "./ui/QueryResult";
+import { getNewestRecipes } from "./lib/apiServices";
 
 export default async function Page({ searchParams }) {
 
   const searchParam = await searchParams
   const query = searchParam?.query || '' 
+  const newestRecipes = await getNewestRecipes()
 
   return (
     <div className="px-4">
@@ -26,8 +28,8 @@ export default async function Page({ searchParams }) {
         <FeaturedRecipes />
       </Suspense>
 
-      <div className="my-8">
-        <ImageSlider />
+      <div className="my-12">
+        <ImageSlider newestRecipes={ newestRecipes } />
       </div>
 
       <nav className="flex flex-col gap-4">

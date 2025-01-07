@@ -1,6 +1,6 @@
 import Link from "next/link";
-// import { GoLinkExternal } from "react-icons/go";
-// import { RiNextjsFill } from "react-icons/ri";
+import { GoLinkExternal } from "react-icons/go";
+import { RiNextjsFill } from "react-icons/ri";
 
 export default function Footer() {
 
@@ -9,24 +9,29 @@ export default function Footer() {
    return (
       <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-between sm:w-full sm:px-8">
          <p>Copyright &copy; { date }</p>
-         <div className="flex items-center gap-1 text-blue-500 hover:underline">
+         <div className="flex items-center gap-1">
+            <span>Built by</span>
             <a
                href="https://oscar-next-portfolio.vercel.app/"
                target="_blank"
+               className="text-blue-500 hover:underline"
             >
-               Built by Oscar4dev
+               Oscar4dev
             </a>
-            {/* <GoLinkExternal /> */}
+            <GoLinkExternal />
          </div>
 
          <p>All rights reserved.</p>
 
          <Link
             href={ 'https://nextjs.org/' }
-            className="text-lg flex items-center gap-1"
+            target="_blank"
+            className="flex items-center gap-1"
          >
-            <span>Powered by Next.js</span>
-            {/* <RiNextjsFill /> */}
+            <span>Powered by</span>
+            <span className="text-lg">
+               <RiNextjsFill />
+            </span>
          </Link>
       </div>
    )

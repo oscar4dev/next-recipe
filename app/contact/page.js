@@ -5,7 +5,7 @@ import { FaWhatsapp } from "react-icons/fa6";
 
 export default function Page() {
    return (
-      <div className="h-[400px] px-4 space-y-4 max-w-[1024px] mx-auto">
+      <div className="min-h-screen px-4 space-y-4 max-w-[1024px] mx-auto">
          <p className="mb-8">
             Hello 👋, I&apos;m eager to discuss how I can contribute 
             to your project&apos;s success. You can visit 
