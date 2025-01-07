@@ -30,7 +30,7 @@ export async function getFeaturedRecipes () {
       }
 
       const data = await res.json()
-      return data.data.recipes.slice(0, 5)
+      return data.data.recipes.slice(0, 4)
       
    } catch (error) {
       console.error('An error occured loading data', error)

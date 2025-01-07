@@ -1,26 +1,31 @@
 'use client'
 
-import { useState } from "react"
+import { useRouter } from "next/navigation"
+import { useRecipe } from "./recipeContext"
 
-export default function AvailableSearchQuery() {
+export default function AvailableSearchQuery() {   
 
-   const [isOpen, setIsOpen] = useState(false)
+   const { isOpen, setIsOpen } = useRecipe()   
+   const router = useRouter()
 
    function handleToggle () {
       setIsOpen((cur) => {
          return !cur
       })
+      router.push('/')
    }   
 
    return (
-      <button
-         onClick={ handleToggle }
-         className="border border-slate-900 w-8"
-      >
-         {
-            isOpen 
-               ? '-' : '+'
-         }
-      </button>
+      <>
+         <button
+            onClick={ handleToggle }
+            className="z-10 bg-slate-50 shadow-md rounded-lg border-2 h-10 aspect-square"
+         >
+            {
+               isOpen
+                  ? '-' : '+'
+            }
+         </button>
+      </>
    )
 }

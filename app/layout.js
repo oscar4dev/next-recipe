@@ -31,25 +31,22 @@ export default function RootLayout({ children }) {
           }}
         /> */}
 
-        <header className="z-10 fixed mt-4 w-full">
-          <PageNav />
-
-          <Suspense fallback={ <div>loading...</div> }>
-            <div className="sm:hidden">
-              <Search />
-              <div className="flex justify-end mr-8 mt-2">
-                <AvailableSearchQuery />
+        <RecipeContextProvider>
+          <header className="z-10 fixed mt-4 w-full">
+            <PageNav />
+            <Suspense fallback={ <div>loading...</div> }>
+              <div className="sm:hidden">
+                <Search />
+                {/* <div className="flex justify-end mr-8 mt-2">
+                  <AvailableSearchQuery />
+                </div> */}
               </div>
-            </div>
-          </Suspense>
-
-        </header>
-
-        <main className="pt-40 flex-1 lg:w-[1024px] lg:mx-auto">
-          <RecipeContextProvider>
+            </Suspense>
+          </header>
+          <main className="pt-40 flex-1 lg:w-[1024px] lg:mx-auto">
             {children}
-          </RecipeContextProvider>
-        </main>
+          </main>
+        </RecipeContextProvider>
 
         <footer className="flex items-center justify-center border-t py-8 mt-8">
           <Footer />

@@ -13,7 +13,7 @@ export default async function Recipe({ query }) {
    return (
       <div className="px-4">
          { query && <h1 className="text-center mb-8">Your search result...</h1>}
-         <ul className='flex flex-col gap-8 items-center justify-center w-full mx-auto'>
+         <ul className='flex flex-col gap-8 items-center justify-center w-full mx-auto mb-8 sm:flex-row sm:flex-wrap'>
             {
                recipes?.map((item) => {
                   return <RecipeItem

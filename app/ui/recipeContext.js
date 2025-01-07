@@ -8,6 +8,7 @@ const RecipeContext = createContext(null)
 function RecipeContextProvider ({ children }) {
 
    const [favourites, setFavourites] = useState([])
+   const [isOpen, setIsOpen] = useState(false)
     
    function handleFavourites (newItem) {
       let copyOfFavourites = [...favourites]
@@ -27,7 +28,9 @@ function RecipeContextProvider ({ children }) {
    }
 
    return (
-      <RecipeContext.Provider value={ { handleFavourites, favourites } }>
+      <RecipeContext.Provider value={ { 
+         handleFavourites, favourites, isOpen, setIsOpen } }
+      >
          { children }
       </RecipeContext.Provider>
    )

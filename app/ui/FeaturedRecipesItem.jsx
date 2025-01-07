@@ -6,7 +6,7 @@ export default function FeaturedRecipesItem({ item }) {
    return (
       <Link 
          href={ `/favourites/${ item.id }` }
-         className="relative flex items-center justify-center h-[400px] w-full overflow-hidden sm:w-[300px]"
+         className="relative flex items-center justify-center h-[400px] w-full overflow-hidden sm:h-[350px] sm:w-[210px]"
       >
          <Image 
             src={ item.image_url }

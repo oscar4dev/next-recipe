@@ -1,6 +1,9 @@
+import Accordion from "../ui/Accordion";
 
 export default function page() {
    return (
-      <div>page</div>
+      <div>
+         <Accordion />
+      </div>
    )
 }
