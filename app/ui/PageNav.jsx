@@ -11,7 +11,7 @@ export default function PageNav() {
    const pathname = usePathname()
 
    return (
-      <div className="flex items-center justify-between bg-slate-100 p-4 rounded-full w-[95%] mx-auto">
+      <div className="flex items-center justify-between bg-slate-100 p-4 rounded-full w-[95%] mx-auto dark:bg-slate-800 dark:text-slate-50">
          <Link href={ '/' }>
             <Logo />
          </Link>

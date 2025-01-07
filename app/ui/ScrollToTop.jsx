@@ -13,7 +13,7 @@ export default function ScrollToTop() {
 
    return (
       <button
-         className="bg-slate-50 shadow-md rounded-lg border-2 h-10 aspect-square flex items-center justify-center"
+         className="bg-slate-50 shadow-md rounded-lg border-2 h-10 aspect-square flex items-center justify-center dark:bg-slate-800"
          onClick={ handleClick }
          title="Scroll to top"
       >

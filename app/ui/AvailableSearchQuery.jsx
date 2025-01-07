@@ -19,7 +19,8 @@ export default function AvailableSearchQuery() {
       <>
          <button
             onClick={ handleToggle }
-            className="z-10 bg-slate-50 shadow-md rounded-lg border-2 h-10 aspect-square"
+            title="Available search queries"
+            className="z-10 bg-slate-50 shadow-md rounded-lg border-2 h-10 aspect-square dark:bg-slate-800"
          >
             {
                isOpen

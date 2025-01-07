@@ -25,7 +25,7 @@ export default function ThemeSwitcher() {
       <button
          onClick={ handleClick }
          title={ `Switch to ${ theme === 'light' ? 'dark' : 'light' } mode` }
-         className="bg-slate-50 shadow-md rounded-lg border-2 h-10 aspect-square flex items-center justify-center"
+         className="bg-slate-50 shadow-md rounded-lg border-2 h-10 aspect-square flex items-center justify-center dark:bg-slate-800"
       >
          {
             theme === 'light' 

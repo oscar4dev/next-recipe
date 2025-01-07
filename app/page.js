@@ -5,8 +5,6 @@ import Spinner from "./ui/Spinner";
 import ImageSlider from "./ui/ImageSlider";
 import Link from "next/link";
 import QueryResult from "./ui/QueryResult";
-import ThemeSwitcher from "./ui/ThemeSwitcher";
-import ScrollToTop from "./ui/ScrollToTop";
 
 export default async function Page({ searchParams }) {
 
@@ -33,14 +31,19 @@ export default async function Page({ searchParams }) {
       </div>
 
       <nav className="flex flex-col gap-4">
-        <Link className="w-[50px]" href={ '/faq' }>FAQ</Link>
-        <Link className="w-[80px]" href={ '/contact' }>Contact</Link>
+        <Link 
+          className="w-[50px] hover:underline" 
+          href={ '/faq' }
+        >
+          FAQ
+        </Link>
+        <Link 
+          className="w-[80px] hover:underline" 
+          href={ '/contact' }
+        >
+          Contact
+        </Link>
       </nav>
-
-      <div className="z-10 fixed right-4 bottom-20 flex flex-col gap-4">
-        <ThemeSwitcher />
-        <ScrollToTop />
-      </div>
 
     </div>
   )

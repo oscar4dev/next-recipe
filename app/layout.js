@@ -6,7 +6,8 @@ import { RecipeContextProvider } from "./ui/recipeContext";
 import Search from "./ui/Search";
 import Footer from "./ui/Footer";
 import { Suspense } from "react";
-import AvailableSearchQuery from "./ui/AvailableSearchQuery";
+import ThemeSwitcher from "./ui/ThemeSwitcher";
+import ScrollToTop from "./ui/ScrollToTop";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -21,7 +22,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={` ${montserrat.className} antialiased flex flex-col min-h-dvh`}
+        className={` ${montserrat.className} antialiased flex flex-col min-h-dvh dark:bg-slate-900 dark:text-slate-50`}
       >
         {/* <Toaster
           position="top-center"
@@ -37,12 +38,10 @@ export default function RootLayout({ children }) {
             <Suspense fallback={ <div>loading...</div> }>
               <div className="sm:hidden">
                 <Search />
-                {/* <div className="flex justify-end mr-8 mt-2">
-                  <AvailableSearchQuery />
-                </div> */}
               </div>
             </Suspense>
           </header>
+
           <main className="pt-40 flex-1 lg:w-[1024px] lg:mx-auto">
             {children}
           </main>
@@ -51,6 +50,12 @@ export default function RootLayout({ children }) {
         <footer className="flex items-center justify-center border-t py-8 mt-8">
           <Footer />
         </footer>
+
+        <div className="z-10 fixed right-4 bottom-20 flex flex-col gap-4">
+          <ThemeSwitcher />
+          <ScrollToTop />
+        </div>
+
       </body>
     </html>
   );

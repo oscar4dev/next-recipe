@@ -145,7 +145,7 @@ export default function QueryResult() {
                searchQuery.map((item, i) => {
                   return <li 
                      key={ i }
-                     className="bg-slate-100 px-1"
+                     className="bg-slate-100 px-1 dark:bg-slate-800"
                   >
                      { item }
                   </li>

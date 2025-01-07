@@ -37,7 +37,7 @@ export default function Search() {
             type="text"
             placeholder="Search for a recipe eg carrot"
             onClick={ handleClick }
-            className="shadow-md rounded-full border-2 w-5/6 p-2 pl-4 outline-slate-900 placeholder:text-sm sm:w-[250px] sm:focus:w-[300px] transition-all duration-300 ease-in-out"
+            className="shadow-md rounded-full border-2 w-5/6 p-2 pl-4 outline-slate-900 placeholder:text-sm sm:w-[250px] sm:focus:w-[300px] transition-all duration-300 ease-in-out dark:bg-slate-800"
             onChange={ (e) => handleSearch(e.target.value) }
             defaultValue={ searchParams.get('query')?.toString() }
          />
