@@ -3,6 +3,10 @@ import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa6";
 import { FaWhatsapp } from "react-icons/fa6";
 
+export const metadata = {
+   title: 'contact'
+}
+
 export default function Page() {
    return (
       <div className="min-h-screen px-4 space-y-4 max-w-[1024px] mx-auto">

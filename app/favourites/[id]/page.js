@@ -2,7 +2,13 @@ import { getRecipe } from "@/app/lib/apiServices"
 import AddToFavouritesBtn from "@/app/ui/AddToFavouritesBtn"
 import IngredientsItem from "@/app/ui/IngredientsItem"
 import Image from "next/image"
-// import { FaInfoCircle } from "react-icons/fa";
+import { FaInfoCircle } from "react-icons/fa";
+
+export async function generateMetadata ({ params }) {
+   const { id } = await params
+   const title = await getRecipe(id)
+   return { title: `Recipe ${ title }` }
+}
 
 export default async function page({ params }) {
 
@@ -39,9 +45,9 @@ export default async function page({ params }) {
                   <span>Published by: { publisher }</span>
                   <a
                      href={ source_url }
+                     target="_blank"
                   >
-                     {/* <FaInfoCircle /> */}
-                     info
+                     <FaInfoCircle />
                   </a>
                </p>
             

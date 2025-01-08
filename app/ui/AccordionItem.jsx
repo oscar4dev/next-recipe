@@ -8,8 +8,8 @@ export default function AccordionItem({ item, num, setCurOpen, curOpen }) {
    }
 
    return (
-      <div 
-         className={`space-y-4 w-full border px-2 py-4 sm:p-8 rounded-lg ${isOpen ? 'border-t-4 border-slate-500 dark:border-slate-50' : ''}`}
+      <li 
+         className={`cursor-pointer space-y-4 w-full border px-2 py-4 sm:p-8 rounded-lg ${isOpen ? 'border-t-4 border-slate-500 dark:border-slate-50' : ''}`}
          onClick={ handleClick }
       >
          <div className="flex items-center">
@@ -20,6 +20,6 @@ export default function AccordionItem({ item, num, setCurOpen, curOpen }) {
             </button>
          </div>
          { isOpen ? <p className="ml-4">{ item.answer }</p> : '' }
-      </div>
+      </li>
    )
 }

@@ -14,8 +14,11 @@ const montserrat = Montserrat({
 });
 
 export const metadata = {
-  title: "",
-  description: "",
+  title: {
+    template: '%s | Next-Recipe',
+    default: 'Next-Recipe',
+  },
+  description: 'My Next-Recipe portfolio project built with App Router.',
 };
 
 export default function RootLayout({ children }) {
@@ -35,7 +38,7 @@ export default function RootLayout({ children }) {
         <RecipeContextProvider>
           <header className="z-10 fixed mt-4 w-full">
             <PageNav />
-            <Suspense fallback={ <div>loading...</div> }>
+            <Suspense fallback={<div>loading...</div>}>
               <div className="sm:hidden">
                 <Search />
               </div>
